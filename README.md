@@ -28,7 +28,7 @@ SciFinder V2 是面向 Codex 的文献检索与下载 Skill。
 
 SciFinder V2 不修改 InstSci 的 Python 包、CLI 或 MCP 公共接口，而是作为上层编排 Skill 使用现有能力。
 
-## 为什么需要 V2
+## 该版本重点完善的内容
 
 ### 1. 避免依赖 Elsevier 全文 API
 
@@ -46,7 +46,7 @@ Elsevier 文献默认直接通过 InstSci 的可见浏览器和机构认证下�
 ```bash
 instsci papers <doi-file> \
   --publisher elsevier \
-  --institution "Beijing Normal University" \
+  --institution "your institution" \
   --concurrency 1
 ```
 
@@ -257,14 +257,6 @@ JSON + CSV + Markdown 统一报告
 - InstSci CloakBrowser，用于出版社和机构认证
 - 用户本人合法拥有的学校、图书馆或机构访问权限
 
-本项目默认机构配置为：
-
-```text
-北京师范大学
-Beijing Normal University
-```
-
-机构名称可在实际运行时覆盖。
 
 ## 安装
 
@@ -280,7 +272,7 @@ uv tool install git+https://github.com/Rimagination/instsci.git
 配置机构：
 
 ```bash
-instsci setup --school "Beijing Normal University"
+instsci setup --school "你的机构"
 ```
 
 然后在 Codex 中安装本 Skill：
@@ -404,7 +396,7 @@ Elsevier papers are routed directly through InstSci's visible, institution-authe
 ```bash
 instsci papers <doi-file> \
   --publisher elsevier \
-  --institution "Beijing Normal University" \
+  --institution "your institution" \
   --concurrency 1
 ```
 
@@ -466,7 +458,7 @@ uv tool install git+https://github.com/Rimagination/instsci.git
 Configure the default institution:
 
 ```bash
-instsci setup --school "Beijing Normal University"
+instsci setup --school "your institution"
 ```
 
 Then ask Codex to install this skill:
