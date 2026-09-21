@@ -1,0 +1,4 @@
+interface:
+  display_name: "SciFinder"
+  short_description: "Discover, deduplicate, and download research papers"
+  default_prompt: "Use $scifinder to find literature for my research topic with Undermind and Google Scholar, deduplicate it, and download the relevant papers."
